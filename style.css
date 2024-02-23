@@ -1,0 +1,62 @@
+body{
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+  /* Définir l'image de fond */
+    background: url('house.webp') center/cover no-repeat;
+    overflow:hidden;
+}
+img{
+    position:absolute;
+}
+.darwin1{
+    height:200px;
+    width:170px;
+    z-index: 20;
+}
+.darwin2{
+    z-index:0;
+}
+button{
+    z-index:100;
+    border-radius:20px;
+    border-style:none;
+    background-color:rgb(0, 174, 255);
+    height:50px;
+    width:100px;
+}
+@media only screen and (max-width: 767px) {
+    .gumballdarwin{
+        top:62%;
+        height:230px;
+        width:390px;
+        z-index:50;
+    }
+    .darwin1{
+        height:200px;
+        width:170px;
+        z-index: 20;
+        top:50%;
+        animation: walk 4s infinite linear;
+    }
+    @keyframes walk{
+        from{
+            left:-50%;
+        }
+        to{
+            left:100%;
+        }
+    }
+    .darwin2{
+        top:0%;
+        height:300px;
+        width:270px;
+        z-index:0;
+    }
+
+}
+  

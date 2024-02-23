@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do U love gumball</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="the-amazing-world-of-gumball-darwin.gif" class="darwin1">
+    <img src="darwin.gif" class="darwin2">
+    <img src="gumball-and-darwing.gif" class="gumballdarwin">
+    <button id="activerSon">Activer le son</button>
+
+    <audio id="backgroundAudio" loop>
+        <source src="Playlist of songs thatll make you dance ~ Feeling good playlist [TubeRipper.com].mp3" type="audio/mp3">
+        Votre navigateur ne prend pas en charge l'élément audio.
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Obtenez la référence vers le bouton et l'élément audio
+          var boutonSon = document.getElementById('activerSon');
+          var audio = document.getElementById('backgroundAudio');
+      
+          // Ajoutez un gestionnaire d'événements au clic sur le bouton
+          boutonSon.addEventListener('click', function() {
+            // Vérifiez si le son est en pause, et si oui, démarrez-le
+            if (audio.paused) {
+              audio.play();
+              boutonSon.textContent = 'Désactiver le son';
+            } else {
+              // Si le son est en cours de lecture, mettez-le en pause
+              audio.pause();
+              boutonSon.textContent = 'Activer le son';
+            }
+          });
+        });
+      </script>
+      
+</body>
+</html>
